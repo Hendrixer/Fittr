@@ -6,6 +6,8 @@ var fitbitClient = require('fitbit-js')(config.consumerKey, config.consumerSecre
 module.exports = {
   // Base URL for config - no trailing slash
   baseUrl: 'http://127.0.0.1:3000',
+  // baseUrl: 'http://frozen-tor-6324.herokuapp.com',
+  
   // =========================
   // Home page
   // =========================

@@ -46,5 +46,6 @@ require('./app/routes.js')(app, passport);
 //   });
 // });
 
+// process.env.PORT for heroku
 app.listen(app.get('port'));
 console.log('I hears ya on ' + helpers.baseUrl);
