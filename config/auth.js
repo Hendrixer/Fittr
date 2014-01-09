@@ -1,4 +1,3 @@
-// var helpers = require('./routeHelpers.js');
 module.exports = {
 
   facebook: {

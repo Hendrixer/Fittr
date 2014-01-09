@@ -10,7 +10,8 @@
 
 // Defaults / Configs
 var mongoose      = require('mongoose'),
-    db            = mongoose.connect('mongodb://localhost/fittr'),
+    // db            = mongoose.connect('mongodb://localhost/fittr'),
+    db            = mongoose.connect(process.env.MONGOHQ_URL),
     User          = require('./app/models/users.js'),
     Steps         = require('./app/models/fbSteps.js'),
     config        = require('./config/auth.js').fitbit,
