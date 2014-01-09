@@ -1,4 +1,4 @@
 module.exports = {
   // 'url' : 'mongodb://localhost/fittr'
-	'url' : MONGOHQ_URL
+	'url' : process.env.MONGOHQ_URL
 };
