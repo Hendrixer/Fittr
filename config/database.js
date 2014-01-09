@@ -1,3 +1,4 @@
 module.exports = {
-	'url' : 'mongodb://localhost/fittr'
+  // 'url' : 'mongodb://localhost/fittr'
+	'url' : MONGOHQ_URL
 };
