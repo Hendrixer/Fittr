@@ -1,4 +1,4 @@
-var helpers = require('../config/routeHelpers.js');
+var helpers = require('./routeHelpers.js');
 module.exports = {
 
   facebook: {
