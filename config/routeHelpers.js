@@ -4,6 +4,8 @@ var config = require('./auth.js').fitbit;
 var fitbitClient = require('fitbit-js')(config.consumerKey, config.consumerSecret);
 
 module.exports = {
+  // Base URL for config - no trailing slash
+  baseUrl: 'http://127.0.0.1:3000',
   // =========================
   // Home page
   // =========================

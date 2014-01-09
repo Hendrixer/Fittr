@@ -5,6 +5,7 @@ var configEnv = require('./config/environment.js');
 var mongoose = require('mongoose');
 var configDB = require('./config/database.js');
 // var fitbitClient = require('fitbit-js')(config.fitbit.consumerKey, config.fitbit.consumerSecret);
+var helpers = require('./config/routeHelpers.js');
 
 mongoose.connect(configDB.url);
 
@@ -46,4 +47,4 @@ require('./app/routes.js')(app, passport);
 // });
 
 app.listen(app.get('port'));
-console.log('I hears ya on localhost:3000');
+console.log('I hears ya on ' + helpers.baseUrl);
