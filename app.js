@@ -4,6 +4,8 @@ var passport = require('passport');
 var configEnv = require('./config/environment.js');
 var mongoose = require('mongoose');
 var configDB = require('./config/database.js');
+// var fitbitClient = require('fitbit-js')(config.fitbit.consumerKey, config.fitbit.consumerSecret);
+var helpers = require('./config/routeHelpers.js');
 
 mongoose.connect(configDB.url);
 
@@ -34,5 +36,6 @@ app.configure(function(){
 require('./app/routes.js')(app, passport);
 
 
+// process.env.PORT for heroku
 app.listen(app.get('port'));
-console.log('I hears ya on localhost:3000');
+console.log('I hears ya on ' + helpers.baseUrl);

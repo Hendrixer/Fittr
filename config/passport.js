@@ -1,7 +1,9 @@
-var fitbitStrategy = require('passport-fitbit').Strategy,
-    config         = require('./auth.js'),
-// load up the user model
-    User           = require('../app/models/users.js');
+
+var fitbitStrategy = require('passport-fitbit').Strategy;
+var config         = require('./auth.js');
+var helpers        = require('./routeHelpers.js');
+var User           = require('../app/models/users.js');
+
 
 module.exports = function(passport) {
 
@@ -32,7 +34,7 @@ module.exports = function(passport) {
   passport.use(new fitbitStrategy({
     consumerKey: config.fitbit.consumerKey,
     consumerSecret: config.fitbit.consumerSecret,
-    callbackURL: config.fitbit.callbackURL
+    callbackURL: helpers.baseUrl + config.fitbit.callbackURL
   },
     function(token, tokenSecret, profile, done) {
       process.nextTick(function() {
